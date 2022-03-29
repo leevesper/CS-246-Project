@@ -30,7 +30,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         fruitsButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "breakfast";
+            foodCatSelection = "fruits";
             openFilteredRecipes();
         }
     }
@@ -40,7 +40,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         vegetablesButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "lunch";
+            foodCatSelection = "vegetables";
             openFilteredRecipes();
 
         }
@@ -50,7 +50,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         grainsButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "dinner";
+            foodCatSelection = "grains";
             openFilteredRecipes();
 
         }
@@ -60,7 +60,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         proteinButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "dinner";
+            foodCatSelection = "proteinfoods";
             openFilteredRecipes();
 
         }
@@ -70,7 +70,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         dairyButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "dinner";
+            foodCatSelection = "dairy";
             openFilteredRecipes();
 
             }
@@ -78,7 +78,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
 
 }
     public void openFilteredRecipes() {
-        Intent intent = new Intent(this, FoodCatMenuActivity.class);
+        Intent intent = new Intent(this, FilteredRecipesActivity.class);
         //pass "mealMenuSelection" and "foodCatSelection" variables to 'filteredRecipes' activity.
         startActivity(intent);
 

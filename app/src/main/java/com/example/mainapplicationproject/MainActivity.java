@@ -10,7 +10,9 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
+    private Button Account;
     private Button mealMenuButton;
+    public boolean logged_in = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +23,23 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //if (!isLogin || !hasAccount) {}
                 openLogin();
-
             }
         });
+
+        Account = (Button) findViewById(R.id.openUserAccountButton);
+        Account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //if (!isLogin || !hasAccount) {}
+                if (logged_in = false) {
+                    openLogin();
+                } else {
+                    openAccount();
+                }
+            }
+        });
+
         mealMenuButton = (Button) findViewById(R.id.buttonMealMenu);
         mealMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,10 +48,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public void openLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+
+    public void openAccount() {
+        Intent intent = new Intent(this, UserAccountActivity.class);
+        startActivity(intent);
+    }
+
     public void openMealMenu() {
         Intent intent = new Intent(this, MealMenuActivity.class);
         startActivity(intent);
