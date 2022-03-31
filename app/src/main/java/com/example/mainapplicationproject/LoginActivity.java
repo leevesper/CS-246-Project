@@ -5,18 +5,25 @@ package com.example.mainapplicationproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+//Login activity to log user into account. It was realized after initial design phase that another
+// activity we need to be added to allow user to create an account.
+//
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editTextName;
     private EditText editTextPassword;
     private Button buttonEnter;
+    private Button forgotPasswordButton;
     //private TextView textViewAttemptsInfo;
+    //Hardcoded username and password variables for testing purposes.
     private String Username = "name";
     private String Password = "password123";
 
@@ -27,7 +34,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
+
+        // Creates back arrow to return to Main activity.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Set action bar to black
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         editTextName = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -53,17 +64,31 @@ public class LoginActivity extends AppCompatActivity {
                         Button btn = findViewById(R.id.buttonLogin);
                         btn.setText("Account");
                         //return user to MainActivity page.
+                        //Code to change user status to logged in not yet added.
                         finish();
                     }
                 }
             }
         });
+        // Displays hint when user clicks "Forgot Password button. Hint currently hard coded.
+        forgotPasswordButton = (Button) findViewById(R.id.buttonForgotPassword);
+        forgotPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showHint();
+            }
+        });
     }
+    //Method to determine if user had entered a valid username and password.
     private boolean validate(String name, String password) {
         if(name.equals(Username) && password.equals(Password)){
             return true;
         }
         return false;
+    }
+    //Method to display hint for password and, currently, user name.
+    private void showHint() {
+        Toast.makeText(LoginActivity.this, "Username: 'name', Password: 'password123'.", Toast.LENGTH_LONG).show();
     }
 
 }
