@@ -13,6 +13,8 @@
         android:layout_height="39dp"
         android:gravity="center"
         android:text="Gastro Collab"
+        android:textSize="25dp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -29,31 +31,37 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintVertical_bias="0.444"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/buttonMealMenu"
         android:layout_width="106dp"
         android:layout_height="49dp"
         android:text="Recipes"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintVertical_bias="0.686"
+        app:backgroundTint="@color/white"/>
 
     <Button
         android:id="@+id/openUserAccountButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Account"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/buttonMealMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintVertical_bias="0.519"
+        app:backgroundTint="@color/white"/>
 
 
 

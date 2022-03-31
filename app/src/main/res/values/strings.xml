@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Main Application Project</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="comment">Comment</string>
+    <string name="add_ingredient">Add Ingredient</string>
+    <string name="edit_ingredient">Edit Ingredient</string>
+    <string name="delete_recipe">Delete Recipe</string>
 </resources>

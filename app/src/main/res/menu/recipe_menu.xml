@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/commentMenu"
+        android:title="@string/comment"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/editIngredientMenu"
+        android:title="@string/edit_ingredient"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/addIngredientMenu"
+        android:title="@string/add_ingredient"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/deleteRecipeMenu"
+        android:title="@string/delete_recipe"
+        app:showAsAction="never"/>
+
+</menu>
