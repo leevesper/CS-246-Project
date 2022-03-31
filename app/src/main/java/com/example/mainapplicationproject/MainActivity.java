@@ -3,6 +3,7 @@ package com.example.mainapplicationproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Set action bar to black
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         button = (Button) findViewById(R.id.buttonLogin);
         button.setOnClickListener(new View.OnClickListener() {
@@ -64,5 +68,3 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-// This is a test.
-// This is another test. 
