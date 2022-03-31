@@ -5,67 +5,79 @@
     android:id="@+id/textViewMealMenuMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MealMenuActivity">
+    tools:context=".MealMenuActivity"
+    android:background="@color/background_green">
 
     <TextView
         android:id="@+id/textViewCategories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="82dp"
+        android:layout_height="30dp"
+        android:gravity="center"
         android:text="Menu"
+        android:textColor="@color/white"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <Button
         android:id="@+id/buttonFruits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Breakfast"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCategories"
-        app:layout_constraintVertical_bias="0.143" />
+        app:layout_constraintVertical_bias="0.143"
+        app:backgroundTint="@color/white"/>
 
     <Button
         android:id="@+id/buttonVegetables"
         android:layout_width="120dp"
         android:layout_height="47dp"
         android:text="Lunch"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonFruits"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.134"
+        app:backgroundTint="@color/white"/>
 
     <Button
         android:id="@+id/buttonGrains"
         android:layout_width="121dp"
         android:layout_height="51dp"
         android:text="Dinner"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonVegetables"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.162"
+        app:backgroundTint="@color/white"/>
 
     <Button
         android:id="@+id/buttonProteinFoods"
         android:layout_width="122dp"
         android:layout_height="52dp"
         android:text="Desert"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonGrains"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintVertical_bias="0.23"
+        app:backgroundTint="@color/white"/>
 
     <TextView
         android:id="@+id/textViewCategoriesGS"
@@ -75,5 +87,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProteinFoods" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonProteinFoods"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCategoriesGS"
+        app:srcCompat="@drawable/pan" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
