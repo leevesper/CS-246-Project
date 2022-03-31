@@ -3,9 +3,13 @@ package com.example.mainapplicationproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+//This activity continues to help filter which recipes will be stored in the "FilteredRecipesActivity"
+// based on which button the user clicks.
 
 public class FoodCatMenuActivity extends AppCompatActivity {
 
@@ -14,6 +18,10 @@ public class FoodCatMenuActivity extends AppCompatActivity {
     private Button grainsButton;
     private Button proteinButton;
     private Button dairyButton;
+
+    //Variables to be passed to the filtered recipe activity to determine which recipes to display
+    // from Maine the database. Main database and code to pass variables to "FilteredRecipeActivity"
+    // has not been made.
     public String mealMenuSelection;
     public String foodCatSelection;
 
@@ -22,8 +30,9 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_cat_menu);
 
-        /////////////
+        // Creates action bar and sets action bar color to black.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
 
         fruitsButton = (Button) findViewById(R.id.buttonFruits);
@@ -75,12 +84,12 @@ public class FoodCatMenuActivity extends AppCompatActivity {
 
             }
         });
-
 }
+// Method to open and pass variables into "FilteredRecipesActivity". Code to pass variables has not
+// been added.
     public void openFilteredRecipes() {
         Intent intent = new Intent(this, FilteredRecipesActivity.class);
         //pass "mealMenuSelection" and "foodCatSelection" variables to 'filteredRecipes' activity.
         startActivity(intent);
-
     };
 }
