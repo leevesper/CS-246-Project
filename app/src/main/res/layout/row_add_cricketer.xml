@@ -7,26 +7,20 @@
     android:paddingTop="5dp"
     android:paddingBottom="5dp">
 
-    <EditText
-        android:id="@+id/edit_cricketer_name"
+
+    <Button
+        android:id="@+id/recipes_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/round_grey"
         android:layout_weight="1"
-        android:hint="Cricketer Name"
         android:textSize="14dp"
         android:paddingLeft="10dp"
+        android:text="title, author"
         android:textColor="@color/black"
-        app:backgroundTint="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"></EditText>
-
+        app:backgroundTint="@color/white"></Button>
 
 
 </LinearLayout>
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent">-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

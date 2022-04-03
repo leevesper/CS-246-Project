@@ -23,7 +23,7 @@
 
     <Button
         android:id="@+id/buttonFruits"
-        android:layout_width="153dp"
+        android:layout_width="175dp"
         android:layout_height="52dp"
         android:text="Fruits"
         android:textColor="@color/black"
@@ -37,7 +37,7 @@
 
     <Button
         android:id="@+id/buttonVegetables"
-        android:layout_width="153dp"
+        android:layout_width="175dp"
         android:layout_height="52dp"
         android:text="Vegetables"
         android:textColor="@color/black"
@@ -50,7 +50,7 @@
 
     <Button
         android:id="@+id/buttonGrains"
-        android:layout_width="153dp"
+        android:layout_width="175dp"
         android:layout_height="52dp"
         android:text="Grains"
         android:textColor="@color/black"
@@ -63,7 +63,7 @@
 
     <Button
         android:id="@+id/buttonProteinFoods"
-        android:layout_width="153dp"
+        android:layout_width="175dp"
         android:layout_height="52dp"
         android:text="ProteinFoods"
         android:textColor="@color/black"
@@ -76,7 +76,7 @@
 
     <Button
         android:id="@+id/buttonDairy"
-        android:layout_width="153dp"
+        android:layout_width="175dp"
         android:layout_height="52dp"
         android:text="Dairy"
         android:textColor="@color/black"

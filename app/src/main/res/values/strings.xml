@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Main Application Project</string>
+    <string name="app_name">The Gastronomy Collaboration Recipe Book</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="comment">Comment</string>
     <string name="add_ingredient">Add Ingredient</string>

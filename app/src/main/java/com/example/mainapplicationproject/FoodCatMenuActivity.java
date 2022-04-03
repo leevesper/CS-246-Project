@@ -34,12 +34,18 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
+        /////////////////
+        Bundle mealCatVar = getIntent().getExtras();
+        if (mealCatVar != null) {
+            mealMenuSelection = mealCatVar.getString("mealCatKey");
+        }
+
 
         fruitsButton = (Button) findViewById(R.id.buttonFruits);
         fruitsButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "fruits";
+            foodCatSelection = "Fruits";
             openFilteredRecipes();
         }
     }
@@ -49,7 +55,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         vegetablesButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "vegetables";
+            foodCatSelection = "Vegetables";
             openFilteredRecipes();
 
         }
@@ -59,7 +65,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         grainsButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "grains";
+            foodCatSelection = "Grains";
             openFilteredRecipes();
 
         }
@@ -69,7 +75,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         proteinButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "proteinfoods";
+            foodCatSelection = "Proteinfoods";
             openFilteredRecipes();
 
         }
@@ -79,7 +85,7 @@ public class FoodCatMenuActivity extends AppCompatActivity {
         dairyButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            foodCatSelection = "dairy";
+            foodCatSelection = "Dairy";
             openFilteredRecipes();
 
             }
@@ -90,6 +96,8 @@ public class FoodCatMenuActivity extends AppCompatActivity {
     public void openFilteredRecipes() {
         Intent intent = new Intent(this, FilteredRecipesActivity.class);
         //pass "mealMenuSelection" and "foodCatSelection" variables to 'filteredRecipes' activity.
+        intent.putExtra("mealSelectionKey", mealMenuSelection);
+        intent.putExtra("foodCatKey", foodCatSelection);
         startActivity(intent);
     };
 }

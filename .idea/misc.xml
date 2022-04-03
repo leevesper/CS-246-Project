@@ -6,7 +6,7 @@
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/drawable/ic_baseline_close.xml" value="0.244" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/drawable/round_grey.xml" value="0.244" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/drawable/round_primary.xml" value="0.244" />
-        <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/activity_filtered_recipeds.xml" value="0.5" />
+        <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/activity_filtered_recipeds.xml" value="0.33" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/activity_food_cat_menu.xml" value="0.5" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/activity_login2.xml" value="0.33" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -19,6 +19,7 @@
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/round_grey.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/round_primary.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/row_add_cricketer.xml" value="0.33" />
+        <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/layout/row_add_ingredient.xml" value="0.33" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/menu/menu_filtered_recipes.xml" value="0.33" />
         <entry key="..\:/Users/Marilynn Thomason/AndroidStudioProjects/MainApplicationProject/app/src/main/res/menu/recipe_menu.xml" value="0.33" />
       </map>

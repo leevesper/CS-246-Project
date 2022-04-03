@@ -37,7 +37,7 @@ public class MealMenuActivity extends AppCompatActivity {
         breakfastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selection = "breakfast";
+                selection = "Breakfast";
                 openFoodCatMenu();
                 }
             }
@@ -47,7 +47,7 @@ public class MealMenuActivity extends AppCompatActivity {
         lunchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selection = "lunch";
+                selection = "Lunch";
                 openFoodCatMenu();
 
             }
@@ -57,7 +57,7 @@ public class MealMenuActivity extends AppCompatActivity {
         dinnerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selection = "dinner";
+                selection = "Dinner";
                 openFoodCatMenu();
 
             }
@@ -67,7 +67,7 @@ public class MealMenuActivity extends AppCompatActivity {
         desertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selection = "dinner";
+                selection = "Desert";
                 openFoodCatMenu();
 
             }
@@ -76,6 +76,7 @@ public class MealMenuActivity extends AppCompatActivity {
     public void openFoodCatMenu() {
         Intent intent = new Intent(this, FoodCatMenuActivity.class);
         //pass "selection" variable to 'foodCatMenuActivity'
+        intent.putExtra("mealCatKey", selection);
         startActivity(intent);
 
     };

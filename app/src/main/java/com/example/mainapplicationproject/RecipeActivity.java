@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatSpinner;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.MenuItem;
@@ -21,30 +22,28 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+// Activity for entering a new recipe into the database. Databases not been created. Functionality
+// to allow the activity to be scrollable has not been attempted but not added.
 
-//public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 public class RecipeActivity extends AppCompatActivity implements View.OnClickListener {
     LinearLayout layoutList;
     Button buttonAdd;
 
-    //List<String> teamList = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filtered_recipeds);
+        setContentView(R.layout.activity_recipe);
 
+        // Creates back arrow to return to Main activity.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Set action bar to black
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         layoutList = findViewById(R.id.layout_list);
         buttonAdd = findViewById(R.id.button_add);
 
         buttonAdd.setOnClickListener(this);
 
-//        teamList.add("Team");
-//        teamList.add("India");
-//        teamList.add("Australia");
-//        teamList.add("England");
     }
 
     @Override
@@ -54,6 +53,8 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         return true;
     }
 
+    // Code to create an option functionality in action bar of activity. Functionality has not been
+    // added to the options of the menu bar.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.commentMenu) {
@@ -70,34 +71,26 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         return true;
     }
 
+    // Code to dynamically add a view that allows user to enter new ingredients to the recipe.
     @Override
     public void onClick(View v) {
         addView();
     }
     private void addView() {
 
-        View cricketerView = getLayoutInflater().inflate(R.layout.row_add_cricketer, null, false);
+        View ingredientView = getLayoutInflater().inflate(R.layout.row_add_ingredient, null, false);
 
-        EditText editText = (EditText)cricketerView.findViewById(R.id.edit_cricketer_name);
-        //AppCompatSpinner spinnerTeam = (AppCompatSpinner)cricketerView.findViewById((R.id.spinner_team));
-        //ImageView imageClose = (ImageView)cricketerView.findViewById(R.id.image_remove);
+        EditText editName = (EditText)ingredientView.findViewById(R.id.ingredient_name);
+        EditText editQuantity = (EditText)ingredientView.findViewById(R.id.ingredient_quantity);
+        EditText editUnit = (EditText)ingredientView.findViewById(R.id.ingredient_unit);
 
-        //ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,teamList);
-        //spinnerTeam.setAdapter(arrayAdapter);
-
-//        imageClose.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                removeView(cricketerView);
-//            }
-//        });
-
-        layoutList.addView(cricketerView);
+        layoutList.addView(ingredientView);
 
     }
-    private void removeView(View view) {
-
-        layoutList.removeView(view);
-
-    }
+    // Old code not currently necessary.
+//    private void removeView(View view) {
+//
+//        layoutList.removeView(view);
+//
+//    }
 }

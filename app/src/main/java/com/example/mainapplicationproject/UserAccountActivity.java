@@ -3,9 +3,13 @@ package com.example.mainapplicationproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+// User account activity. Allows user to return to MainActivity, open MealMenuActivity, open user's
+//recipes (UserRecipes) and delete their account. Functionality to delete account has not been added.
 
 public class UserAccountActivity extends AppCompatActivity {
 
@@ -19,8 +23,12 @@ public class UserAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_accouut);
 
+        // Creates back arrow to return to Main activity.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Set action bar to black
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
+        //Code to set on click listeners to buttons.
         menuButton = (Button) findViewById(R.id.userAccountMenuButton);
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +58,8 @@ public class UserAccountActivity extends AppCompatActivity {
             }
         });
     }
+
+    // Methods to moved to different activities.
     public void openMainMenu() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -64,6 +74,6 @@ public class UserAccountActivity extends AppCompatActivity {
         startActivity(intent);
     }
 //    public void deleteAccount() {
-//        // Delete user account
+//        // Delete user account. Functionality has not been added.
 //    }
 }

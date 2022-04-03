@@ -61,8 +61,8 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(LoginActivity.this, "Login successful.", Toast.LENGTH_LONG).show();
                         //change MainActivity login button to "Account"
-                        Button btn = findViewById(R.id.buttonLogin);
-                        btn.setText("Account");
+                        //Button btn = findViewById(R.id.buttonLogin);
+                        //btn.setText("Account");
                         //return user to MainActivity page.
                         //Code to change user status to logged in not yet added.
                         finish();
